@@ -14,20 +14,6 @@ Welcome to the **Library** repository! This repository is a collection of custom
   - Designed to adhere to standard design practices for ease of integration.
   - Includes 3D models for accurate PCB design visualization.
 
-   Below is a table listing the component types and their respective counts in the library:
-
-                  | Component Type | Count |
-                  |------------------------|
-                  | Resistor       | 11    |
-                  | Capacitor      | 12    |
-                  | IC             | 11    |
-                  | Connector      | 9     |
-                  | Inductor       | 3     |
-                  | Diodes         | 3     |
-                  | MCU            | 2     |
-                  | Miscellaneous  | 10    |
-                  | Optoelctronic  | 4     |
-                  | Transistors    | 2     |
 
 ## Getting Started
 
