@@ -1,4 +1,4 @@
-# Library
+# Library 📊
 
 Welcome to the **Library** repository! This repository is a collection of custom components and libraries for PLECS simulations and Altium Designer, tailored for efficient design and simulation workflows.
 
@@ -17,7 +17,7 @@ Welcome to the **Library** repository! This repository is a collection of custom
    Below is a table listing the component types and their respective counts in the library:
 
                   | Component Type | Count |
-                  | -------------- | ----- |
+                  |------------------------|
                   | Resistor       | 11    |
                   | Capacitor      | 12    |
                   | IC             | 11    |
