@@ -7,7 +7,6 @@ Welcome to the **Library** repository! This repository is a collection of custom
 - **PLECS Simulation Components**
   - Custom blocks and components for use in PLECS simulations.
   - Pre-configured models for common circuit elements and systems.
-  - Example simulations to demonstrate component usage.
 
 - **Altium Components and Footprints**
   - A library of custom schematic symbols and PCB footprints.
