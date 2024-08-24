@@ -64,11 +64,15 @@ Plecs {
       SampleTime    "-1"
       CodeGenDiscretizationMethod "2"
       CodeGenTarget "Generic"
-      MaskType      "Separate MOSFET and Diode"
-      MaskDescription "This subsystem contains an individual MOSFET and diode "
-"as well as a case-to-heatsink thermal resistance. This setup is intended to b"
-"e used with Wolfspeed SiC devices and all of the parameter values of the comp"
-"onents within are initialized in the Simulation Parameters window (Ctrl+E)."
+      MaskType      "MOSFET"
+      MaskDescription "This subsystem contains an individual MOSFET component,"
+" tailored for use in high-efficiency switching applications. The MOSFET's key"
+" parameters, such as threshold voltage, on-resistance, and gate charge, can b"
+"e customized and initialized in the Simulation Parameters window (Ctrl+E). Th"
+"is setup is designed to accommodate various MOSFET types, including standard "
+"silicon and advanced wide-bandgap devices like SiC and GaN, ensuring compatib"
+"ility across a broad range of power electronic circuits."
+      MaskHelp      "MOSFET"
       MaskDisplay   "line([0, 0, -10], [20, 10, 10])\n"
 "line([0, 0, -10], [10, 0, 0])\n"
 "line([0, 0, -10], [-20, -10, -10])\n"
@@ -3752,7 +3756,15 @@ Plecs {
       SampleTime    "-1"
       CodeGenDiscretizationMethod "2"
       CodeGenTarget "Generic"
-      MaskType      "Parallel diodes"
+      MaskType      "Diode"
+      MaskDescription "This subsystem contains an individual diode component, "
+"designed for use in high-efficiency power conversion and rectification circui"
+"ts. The diode's characteristics, including forward voltage drop, reverse reco"
+"very time, and junction capacitance, can be customized and initialized in the"
+" Simulation Parameters window (Ctrl+E). This setup is intended to support var"
+"ious diode types, including Schottky, fast recovery, and SiC diodes, making i"
+"t versatile for different circuit applications."
+      MaskHelp      "Diode"
       MaskDisplay   "line([0, 0], [6, 14])\n"
 "line([-7, 7], [-6, -6])\n"
 "line([0,0], [-14, -6])\n"
@@ -3777,55 +3789,10 @@ Plecs {
 "\ttherm_diode.CauerChain.C = therm_diode.CauerChain.C*num_par_diode;\n"
 "end"
       Parameter {
-        Variable      "therm_diode"
-        Prompt        "Diode thermal description"
-        Type          Thermal
-        Class         ""
-        Value         "ref:diode.diode"
-        Show          off
-        TabName       ""
-      }
-      Parameter {
-        Variable      "ron_diode"
-        Prompt        "Diode on resistance"
+        Variable      "Diode"
+        Prompt        "Diode Parameters"
         Type          FreeText
         Value         ""
-        Show          off
-        Tunable       off
-        TabName       ""
-      }
-      Parameter {
-        Variable      "vf_diode"
-        Prompt        "Diode forward voltage"
-        Type          FreeText
-        Value         ""
-        Show          off
-        Tunable       off
-        TabName       ""
-      }
-      Parameter {
-        Variable      "rth_ch"
-        Prompt        "Case to heatsink resistance (thermal grease)"
-        Type          FreeText
-        Value         "diode.rth_ch_diode"
-        Show          off
-        Tunable       off
-        TabName       ""
-      }
-      Parameter {
-        Variable      "t_init"
-        Prompt        "Initial temperature"
-        Type          FreeText
-        Value         "diode.t_init"
-        Show          off
-        Tunable       off
-        TabName       ""
-      }
-      Parameter {
-        Variable      "num_par_diode"
-        Prompt        "number of parallel diodes"
-        Type          FreeText
-        Value         "diode.num_par_diode"
         Show          off
         Tunable       off
         TabName       ""
@@ -3864,17 +3831,17 @@ Plecs {
             LabelPosition east
             Parameter {
               Variable      "Vf"
-              Value         "vf_diode"
+              Value         "Diode.vf_diode"
               Show          off
             }
             Parameter {
               Variable      "Ron"
-              Value         "ron_diode"
+              Value         "Diode.ron_diode"
               Show          off
             }
             Parameter {
               Variable      "thermal"
-              Value         "ref:therm_diode"
+              Value         "ref:Diode.therm_diode"
               Show          off
             }
             Parameter {
@@ -3884,7 +3851,7 @@ Plecs {
             }
             Parameter {
               Variable      "T_init"
-              Value         "t_init"
+              Value         "Diode.t_init"
               Show          off
             }
           }
@@ -3966,7 +3933,7 @@ Plecs {
             LabelPosition south
             Parameter {
               Variable      "Rth"
-              Value         "diode.Case_Amb_rth/diode.num_par_diode"
+              Value         "Diode.Case_Amb_rth/Diode.num_par_diode"
               Show          off
             }
           }
@@ -4071,17 +4038,17 @@ Plecs {
             LabelPosition east
             Parameter {
               Variable      "Vf"
-              Value         "vf_diode"
+              Value         "Diode.vf_diode"
               Show          off
             }
             Parameter {
               Variable      "Ron"
-              Value         "ron_diode"
+              Value         "Diode.ron_diode"
               Show          off
             }
             Parameter {
               Variable      "thermal"
-              Value         "ref:therm_diode"
+              Value         "ref:Diode.therm_diode"
               Show          off
             }
             Parameter {
@@ -4091,7 +4058,7 @@ Plecs {
             }
             Parameter {
               Variable      "T_init"
-              Value         "t_init"
+              Value         "Diode.t_init"
               Show          off
             }
           }
@@ -4652,4 +4619,4 @@ Plecs {
     } 
   }
 }
-DemoSignature "zLSy28tPxnUA1luzb5+7OWOXeX/ou6O8Xp/hmu+DVmA="
+DemoSignature "kvfaOooTWjX0XGClEmUQjuoc50Q7a2931IkA7lbUtv0="

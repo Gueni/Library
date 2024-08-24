@@ -64,8 +64,15 @@ Plecs {
       SampleTime    "-1"
       CodeGenDiscretizationMethod "2"
       CodeGenTarget "Generic"
-      MaskType      "Configurable DCLINK"
-      MaskDescription "Configurable DCLINK"
+      MaskType      "Capacitor"
+      MaskDescription "This subsystem contains an individual capacitor compone"
+"nt, designed for use in high-performance power electronic circuits. The capac"
+"itor's characteristics, such as capacitance, equivalent series resistance (ES"
+"R), and equivalent series inductance (ESL), are all customizable and can be i"
+"nitialized in the Simulation Parameters window (Ctrl+E). This setup is intend"
+"ed to be compatible with a wide range of capacitor types, allowing for flexib"
+"le application in different circuit configurations."
+      MaskHelp      "Capacitor"
       MaskDisplay   "local drawANSI = Preferences:get('DrawANSI')\n"
 "Icon:text( 7 ,-7  ,'+')\n"
 "Icon:line({0, 0}, {-9, 9})\n"
@@ -82,7 +89,7 @@ Plecs {
       MaskIconFrame off
       MaskIconOpaque on
       MaskIconRotates on
-      MaskInit      "% calculate the total values :\n"
+      MaskInit      "\n"
 "Cap_t  = Cap_dict.Cap_s  * Cap_dict.Npara/Cap_dict.Nseri ;\n"
 "Resr_t = Cap_dict.Resr_s * Cap_dict.Npara/Cap_dict.Nseri ;\n"
 "Lesl_t = Cap_dict.Lesl_s * Cap_dict.Npara/Cap_dict.Nseri ;"
@@ -1127,12 +1134,13 @@ Plecs {
       SampleTime    "-1"
       CodeGenDiscretizationMethod "2"
       CodeGenTarget "Generic"
-      MaskType      "Configurable RC/RL Load"
+      MaskType      "Load"
       MaskDescription "This component models either a capacitive or inductive "
 "load based on user selection. The mask image reflects the selected configurat"
 "ion as well as the symbol format (specified from \"PLECS -> Preferences...\")"
 ". The user may pass the corresponding C and L values though the dialog of the"
 " component's mask."
+      MaskHelp      "Load"
       MaskIconFrame on
       MaskIconOpaque off
       MaskIconRotates on
@@ -3402,4 +3410,4 @@ Plecs {
     } 
   }
 }
-DemoSignature "Jn3GrFHTyOnCSDiuF54YscLQEDPOiVQj5N6373DfYDI="
+DemoSignature "OS3oobNPjSt0lu4+mMLyTVCsO7ktorSbf2KNxMbT5gA="
