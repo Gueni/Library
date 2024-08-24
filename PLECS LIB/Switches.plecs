@@ -3773,21 +3773,23 @@ Plecs {
       MaskIconOpaque on
       MaskIconRotates on
       MaskInit      "% scaling diode curves\n"
-"if(~isempty(therm_diode.Von))\n"
-"\ttherm_diode.Von.i = therm_diode.Von.i*num_par_diode;\n"
-"end\n"
-"if(~isempty(therm_diode.Eon))\n"
-"\ttherm_diode.Eon.i = therm_diode.Eon.i*num_par_diode;\n"
-"\ttherm_diode.Eon.E = therm_diode.Eon.E*num_par_diode;\n"
-"end\n"
-"if(~isempty(therm_diode.Eoff))\n"
-"\ttherm_diode.Eoff.i = therm_diode.Eoff.i*num_par_diode;\n"
-"\ttherm_diode.Eoff.E = therm_diode.Eoff.E*num_par_diode;\n"
-"end\n"
-"if(~isempty(therm_diode.CauerChain)) \n"
-"\ttherm_diode.CauerChain.R = therm_diode.CauerChain.R/(num_par_diode);\n"
-"\ttherm_diode.CauerChain.C = therm_diode.CauerChain.C*num_par_diode;\n"
-"end"
+"%if(~isempty(Diode.therm_diode.Von))\n"
+"%\tDiode.therm_diode.Von.i = Diode.therm_diode.Von.i*Diode.num_par_diode;\n"
+"%end\n"
+"%if(~isempty(Diode.therm_diode.Eon))\n"
+"%\tDiode.therm_diode.Eon.i = Diode.therm_diode.Eon.i*Diode.num_par_diode;\n"
+"%\tDiode.therm_diode.Eon.E = Diode.therm_diode.Eon.E*Diode.num_par_diode;\n"
+"%end\n"
+"%if(~isempty(Diode.therm_diode.Eoff))\n"
+"%\tDiode.therm_diode.Eoff.i = Diode.therm_diode.Eoff.i*Diode.num_par_diode;\n"
+"%\tDiode.therm_diode.Eoff.E = Diode.therm_diode.Eoff.E*Diode.num_par_diode;\n"
+"%end\n"
+"%if(~isempty(Diode.therm_diode.CauerChain)) \n"
+"%\tDiode.therm_diode.CauerChain.R = Diode.therm_diode.CauerChain.R/(Diode.num"
+"_par_diode);\n"
+"%\tDiode.therm_diode.CauerChain.C = Diode.therm_diode.CauerChain.C*Diode.num_"
+"par_diode;\n"
+"%end"
       Parameter {
         Variable      "Diode"
         Prompt        "Diode Parameters"
@@ -3904,12 +3906,12 @@ Plecs {
             Frame         [-17, -17; 17, 17]
             Parameter {
               Variable      "Cth"
-              Value         "diode.Case_Cth"
+              Value         "Diode.Case_Cth"
               Show          off
             }
             Parameter {
               Variable      "T_init"
-              Value         "diode.Case_Tinit"
+              Value         "Diode.Case_Tinit"
               Show          off
             }
             Parameter {
@@ -4619,4 +4621,4 @@ Plecs {
     } 
   }
 }
-DemoSignature "kvfaOooTWjX0XGClEmUQjuoc50Q7a2931IkA7lbUtv0="
+DemoSignature "mYpQuy8iogGMtIP6B4lxIoxRq4SwiLZ8XmVKD5Rw27M="

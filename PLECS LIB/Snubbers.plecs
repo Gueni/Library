@@ -614,12 +614,12 @@ Plecs {
             Frame         [-10, -20; 10, 20]
             Parameter {
               Variable      "Cap_dict"
-              Value         "Cap_dict"
+              Value         "RCD.C"
               Show          off
             }
             Parameter {
               Variable      "Configuration"
-              Value         "Cap_dict.Config"
+              Value         "RCD.C.Config"
               Show          off
             }
             Terminal {
@@ -644,33 +644,8 @@ Plecs {
             LabelPosition west
             Frame         [-15, -10; 15, 10]
             Parameter {
-              Variable      "therm_diode"
-              Value         "ref:RCD.diode.diode"
-              Show          off
-            }
-            Parameter {
-              Variable      "ron_diode"
-              Value         "RCD.diode.ron_diode/RCD.diode.num_par_diode"
-              Show          off
-            }
-            Parameter {
-              Variable      "vf_diode"
-              Value         "RCD.diode.vf_diode"
-              Show          off
-            }
-            Parameter {
-              Variable      "rth_ch"
-              Value         "RCD.diode.rth_ch_diode"
-              Show          off
-            }
-            Parameter {
-              Variable      "t_init"
-              Value         "RCD.diode.t_init"
-              Show          off
-            }
-            Parameter {
-              Variable      "num_par_diode"
-              Value         "RCD.diode.num_par_diode"
+              Variable      "Diode"
+              Value         "RCD.diode"
               Show          off
             }
             Parameter {
@@ -1064,21 +1039,81 @@ Plecs {
       }
       MaskProbe {
         Name          "RCD Resistor Voltage"
+        Probe {
+          Component     "R"
+          Path          "Enable"
+          Signals       {"Resistor voltage"}
+        }
+        Probe {
+          Component     "PH"
+          Path          "Disable"
+          Signals       {"Constant"}
+        }
       }
       MaskProbe {
         Name          "RCD Resistor Current"
+        Probe {
+          Component     "PH"
+          Path          "Disable"
+          Signals       {"Constant"}
+        }
+        Probe {
+          Component     "R"
+          Path          "Enable"
+          Signals       {"Resistor current"}
+        }
       }
       MaskProbe {
         Name          "RCD Resistor Dissipation"
+        Probe {
+          Component     "R"
+          Path          "Enable"
+          Signals       {"Resistor power"}
+        }
+        Probe {
+          Component     "PH"
+          Path          "Disable"
+          Signals       {"Constant"}
+        }
       }
       MaskProbe {
         Name          "RCD Capacitor Voltage"
+        Probe {
+          Component     "C"
+          Path          "Enable"
+          Signals       {"Capacitor Voltage"}
+        }
+        Probe {
+          Component     "PH"
+          Path          "Disable"
+          Signals       {"Constant"}
+        }
       }
       MaskProbe {
         Name          "RCD Capacitor Current"
+        Probe {
+          Component     "C"
+          Path          "Enable"
+          Signals       {"Capacitor Current"}
+        }
+        Probe {
+          Component     "PH"
+          Path          "Disable"
+          Signals       {"Constant"}
+        }
       }
       MaskProbe {
         Name          "RCD Capacitor Dissipation"
+        Probe {
+          Component     "C"
+          Path          "Enable"
+          Signals       {"Capacitor Dissipation"}
+        }
+        Probe {
+          Component     "PH"
+          Path          "Disable"
+          Signals       {"Constant"}
+        }
       }
       MaskProbe {
         Name          "RCD Diode Voltage"
@@ -1133,4 +1168,4 @@ Plecs {
     } 
   }
 }
-DemoSignature "AVXC7Zysco/wm4+1Dw/B2/qbeykPWIayyFAM3zCn734="
+DemoSignature "+6kNCFUL1ZmRF63pbs8WU8fMf2D5GjVYDoPGkIZn0uk="
