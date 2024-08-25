@@ -1382,19 +1382,19 @@ Plecs {
             SrcTerminal   2
             Points        [200, 225]
             Branch {
-              DstComponent  "Coss"
+              DstComponent  "Am1"
               DstTerminal   1
             }
             Branch {
-              Points        [200, 280]
+              Points        [245, 225]
               Branch {
-                DstComponent  "Am1"
-                DstTerminal   1
-              }
-              Branch {
-                Points        [280, 280]
+                Points        [280, 225]
                 DstComponent  "Vds"
                 DstTerminal   2
+              }
+              Branch {
+                DstComponent  "Coss"
+                DstTerminal   1
               }
             }
           }
@@ -1433,20 +1433,20 @@ Plecs {
             SrcTerminal   1
             Points        [200, 175]
             Branch {
-              Points        [200, 120]
+              DstComponent  "+"
+              DstTerminal   1
+            }
+            Branch {
+              Points        [245, 175]
               Branch {
-                DstComponent  "+"
-                DstTerminal   1
-              }
-              Branch {
-                Points        [280, 120]
+                Points        [280, 175]
                 DstComponent  "Vds"
                 DstTerminal   1
               }
-            }
-            Branch {
-              DstComponent  "Coss"
-              DstTerminal   2
+              Branch {
+                DstComponent  "Coss"
+                DstTerminal   2
+              }
             }
           }
         }
@@ -4621,4 +4621,4 @@ Plecs {
     } 
   }
 }
-DemoSignature "mYpQuy8iogGMtIP6B4lxIoxRq4SwiLZ8XmVKD5Rw27M="
+DemoSignature "WZaZkYgFnacXeV1lT+swlgCyMBbM8KfwUPG8793Ay24="
