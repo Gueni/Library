@@ -124,7 +124,7 @@ Plecs {
         Position      [0, 60]
         Direction     down
       }
-      TerminalNames { "+", "-", "VDC-", "VDC+", "GND" }
+      TerminalNames { "+", "-", "VDC-", "VDC+", "PE" }
       Location      [0, 26; 1536, 760]
       ZoomFactor    1
       SliderPosition [0, 0]
@@ -248,8 +248,8 @@ Plecs {
           }
           Component {
             Type          Port
-            Name          "GND"
-            Show          off
+            Name          "PE"
+            Show          on
             Position      [265, 255]
             Direction     down
             Flipped       on
@@ -583,7 +583,7 @@ Plecs {
             }
             Branch {
               Points        [265, 145]
-              DstComponent  "GND"
+              DstComponent  "PE"
               DstTerminal   1
             }
           }
@@ -719,8 +719,8 @@ Plecs {
           }
           Component {
             Type          Port
-            Name          "GND"
-            Show          off
+            Name          "PE"
+            Show          on
             Position      [265, 255]
             Direction     down
             Flipped       on
@@ -1026,8 +1026,8 @@ Plecs {
           }
           Component {
             Type          Port
-            Name          "GND"
-            Show          off
+            Name          "PE"
+            Show          on
             Position      [265, 255]
             Direction     down
             Flipped       on
@@ -2552,10 +2552,6 @@ Plecs {
                 DstTerminal   2
               }
             }
-            Branch {
-              DstComponent  "PE"
-              DstTerminal   1
-            }
           }
           Connection {
             Type          Wire
@@ -3938,10 +3934,6 @@ Plecs {
                 DstTerminal   2
               }
             }
-            Branch {
-              DstComponent  "PE"
-              DstTerminal   1
-            }
           }
           Connection {
             Type          Wire
@@ -4447,15 +4439,8 @@ Plecs {
               DstTerminal   1
             }
             Branch {
-              Points        [260, 440]
-              Branch {
-                DstComponent  "VDC-"
-                DstTerminal   1
-              }
-              Branch {
-                DstComponent  "PE"
-                DstTerminal   1
-              }
+              DstComponent  "VDC-"
+              DstTerminal   1
             }
           }
           Connection {
@@ -9032,10 +9017,10 @@ Plecs {
             Type          Port
             Name          "PE"
             Show          on
-            Position      [205, 260]
-            Direction     down
+            Position      [80, 225]
+            Direction     left
             Flipped       on
-            LabelPosition south
+            LabelPosition west
             Parameter {
               Variable      "Index"
               Value         "5"
@@ -9425,8 +9410,16 @@ Plecs {
             Type          Wire
             SrcComponent  "Cy2"
             SrcTerminal   2
-            DstComponent  "Cy1"
-            DstTerminal   1
+            Points        [250, 135]
+            Branch {
+              DstComponent  "Cy1"
+              DstTerminal   1
+            }
+            Branch {
+              Points        [185, 135; 185, 225]
+              DstComponent  "PE"
+              DstTerminal   1
+            }
           }
         }
         Name          "1PH Simple"
@@ -9842,10 +9835,6 @@ Plecs {
             }
             Branch {
               DstComponent  "N"
-              DstTerminal   1
-            }
-            Branch {
-              DstComponent  "PE"
               DstTerminal   1
             }
           }
@@ -15212,12 +15201,12 @@ Plecs {
                   Branch {
                     Points        [465, 365]
                     Branch {
-                      DstComponent  "PE"
-                      DstTerminal   1
-                    }
-                    Branch {
                       DstComponent  "LS1"
                       DstTerminal   3
+                    }
+                    Branch {
+                      DstComponent  "PE"
+                      DstTerminal   1
                     }
                   }
                   Branch {
@@ -15702,21 +15691,14 @@ Plecs {
             SrcTerminal   2
             Points        [760, 370]
             Branch {
-              Points        [400, 370]
+              Points        [240, 370]
               Branch {
-                DstComponent  "PE"
-                DstTerminal   1
+                DstComponent  "Vin1"
+                DstTerminal   2
               }
               Branch {
-                Points        [240, 370]
-                Branch {
-                  DstComponent  "Vin1"
-                  DstTerminal   2
-                }
-                Branch {
-                  DstComponent  "VAC-"
-                  DstTerminal   1
-                }
+                DstComponent  "VAC-"
+                DstTerminal   1
               }
             }
             Branch {
@@ -16229,4 +16211,4 @@ Plecs {
     } 
   }
 }
-DemoSignature "XfyVGkGi9EVgVPOLu4IgVXpQVHYp7SzHczoSf3s/c5I="
+DemoSignature "Al0JVXwQWcLLyBNmly+yYRa6ZdySpDnpoCbsgmRRxKc="
