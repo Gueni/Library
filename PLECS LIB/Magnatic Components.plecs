@@ -240,14 +240,14 @@ Plecs {
             Type          Constant
             Name          "PH"
             Show          on
-            Position      [260, 140]
+            Position      [235, 250]
             Direction     right
             Flipped       off
-            LabelPosition south
-            Frame         [-10, -10; 10, 10]
+            LabelPosition west
+            Frame         [-35, -10; 35, 10]
             Parameter {
               Variable      "Value"
-              Value         "0"
+              Value         "zeros(0,5)"
               Show          off
             }
             Parameter {
@@ -521,14 +521,14 @@ Plecs {
             Type          Constant
             Name          "PH"
             Show          on
-            Position      [260, 140]
+            Position      [270, 250]
             Direction     right
             Flipped       off
-            LabelPosition south
-            Frame         [-10, -10; 10, 10]
+            LabelPosition west
+            Frame         [-30, -10; 30, 10]
             Parameter {
               Variable      "Value"
-              Value         "0"
+              Value         "zeros(0,5)"
               Show          off
             }
             Parameter {
@@ -817,14 +817,14 @@ Plecs {
             Type          Constant
             Name          "PH"
             Show          on
-            Position      [270, 140]
+            Position      [275, 250]
             Direction     right
             Flipped       off
-            LabelPosition south
-            Frame         [-10, -10; 10, 10]
+            LabelPosition west
+            Frame         [-35, -10; 35, 10]
             Parameter {
               Variable      "Value"
-              Value         "0"
+              Value         "zeros(0,5)"
               Show          off
             }
             Parameter {
@@ -1331,14 +1331,14 @@ Plecs {
             Type          Constant
             Name          "PH"
             Show          on
-            Position      [270, 140]
+            Position      [270, 250]
             Direction     right
             Flipped       off
-            LabelPosition south
-            Frame         [-10, -10; 10, 10]
+            LabelPosition west
+            Frame         [-30, -10; 30, 10]
             Parameter {
               Variable      "Value"
-              Value         "0"
+              Value         "zeros(0,5)"
               Show          off
             }
             Parameter {
@@ -1862,14 +1862,14 @@ Plecs {
             Type          Constant
             Name          "PH"
             Show          on
-            Position      [260, 140]
+            Position      [275, 250]
             Direction     right
             Flipped       off
-            LabelPosition south
-            Frame         [-10, -10; 10, 10]
+            LabelPosition west
+            Frame         [-35, -10; 35, 10]
             Parameter {
               Variable      "Value"
-              Value         "0"
+              Value         "zeros(0,5)"
               Show          off
             }
             Parameter {
@@ -2269,14 +2269,14 @@ Plecs {
             Type          Constant
             Name          "PH"
             Show          on
-            Position      [270, 140]
+            Position      [275, 250]
             Direction     right
             Flipped       off
-            LabelPosition south
-            Frame         [-10, -10; 10, 10]
+            LabelPosition west
+            Frame         [-35, -10; 35, 10]
             Parameter {
               Variable      "Value"
-              Value         "0"
+              Value         "zeros(0,5)"
               Show          off
             }
             Parameter {
@@ -2912,14 +2912,14 @@ Plecs {
             Type          Constant
             Name          "PH"
             Show          on
-            Position      [270, 140]
+            Position      [275, 250]
             Direction     right
             Flipped       off
-            LabelPosition south
-            Frame         [-10, -10; 10, 10]
+            LabelPosition west
+            Frame         [-35, -10; 35, 10]
             Parameter {
               Variable      "Value"
-              Value         "0"
+              Value         "zeros(0,5)"
               Show          off
             }
             Parameter {
@@ -3594,14 +3594,14 @@ Plecs {
             Type          Constant
             Name          "PH"
             Show          on
-            Position      [270, 140]
+            Position      [275, 250]
             Direction     right
             Flipped       off
-            LabelPosition south
-            Frame         [-10, -10; 10, 10]
+            LabelPosition west
+            Frame         [-35, -10; 35, 10]
             Parameter {
               Variable      "Value"
-              Value         "0"
+              Value         "zeros(0,5)"
               Show          off
             }
             Parameter {
@@ -4391,8 +4391,8 @@ Plecs {
       }
       CommentThroughTerminals    [ [ 0 1 ][ 2 3 ] ]
       Schematic {
-        Location      [115, 643; 538, 847]
-        ZoomFactor    1
+        Location      [0, 23; 1536, 777]
+        ZoomFactor    1.30957
         SliderPosition [0, 0]
         ShowBrowser   off
         BrowserWidth  100
@@ -4400,7 +4400,7 @@ Plecs {
           Type          Inductor
           Name          "L1-Lm"
           Show          on
-          Position      [85, 30]
+          Position      [215, 170]
           Direction     left
           Flipped       off
           LabelPosition north
@@ -4419,7 +4419,7 @@ Plecs {
           Type          Resistor
           Name          "R1-Rm"
           Show          on
-          Position      [140, 30]
+          Position      [270, 170]
           Direction     left
           Flipped       off
           LabelPosition north
@@ -4433,7 +4433,7 @@ Plecs {
           Type          Port
           Name          "w1a"
           Show          on
-          Position      [35, 30]
+          Position      [165, 170]
           Direction     right
           Flipped       off
           LabelPosition south
@@ -4452,7 +4452,7 @@ Plecs {
           Type          Inductor
           Name          "Lm"
           Show          on
-          Position      [185, 55]
+          Position      [315, 195]
           Direction     down
           Flipped       on
           LabelPosition west
@@ -4471,7 +4471,7 @@ Plecs {
           Type          Resistor
           Name          "Rm"
           Show          on
-          Position      [185, 105]
+          Position      [315, 245]
           Direction     down
           Flipped       off
           LabelPosition west
@@ -4485,7 +4485,7 @@ Plecs {
           Type          Transformer
           Name          "Tr1"
           Show          on
-          Position      [230, 85]
+          Position      [360, 225]
           Direction     right
           Flipped       on
           LabelPosition south
@@ -4519,7 +4519,7 @@ Plecs {
           Type          Port
           Name          "w1b"
           Show          on
-          Position      [30, 130]
+          Position      [160, 270]
           Direction     right
           Flipped       off
           LabelPosition south
@@ -4538,7 +4538,7 @@ Plecs {
           Type          Inductor
           Name          "L2-Lm"
           Show          on
-          Position      [275, 30]
+          Position      [405, 170]
           Direction     left
           Flipped       on
           LabelPosition north
@@ -4557,7 +4557,7 @@ Plecs {
           Type          Resistor
           Name          "R2-Rm"
           Show          on
-          Position      [330, 30]
+          Position      [460, 170]
           Direction     left
           Flipped       off
           LabelPosition north
@@ -4571,7 +4571,7 @@ Plecs {
           Type          Port
           Name          "w2a"
           Show          on
-          Position      [380, 30]
+          Position      [510, 170]
           Direction     right
           Flipped       on
           LabelPosition south
@@ -4590,7 +4590,7 @@ Plecs {
           Type          Port
           Name          "w2b"
           Show          on
-          Position      [380, 130]
+          Position      [510, 270]
           Direction     right
           Flipped       on
           LabelPosition south
@@ -4609,7 +4609,7 @@ Plecs {
           Type          Voltmeter
           Name          "Vm1"
           Show          off
-          Position      [60, 80]
+          Position      [190, 220]
           Direction     up
           Flipped       off
           LabelPosition west
@@ -4618,7 +4618,7 @@ Plecs {
           Type          Voltmeter
           Name          "Vm2"
           Show          off
-          Position      [355, 80]
+          Position      [485, 220]
           Direction     up
           Flipped       off
           LabelPosition west
@@ -4627,7 +4627,7 @@ Plecs {
           Type          Wire
           SrcComponent  "L2-Lm"
           SrcTerminal   2
-          Points        [240, 30]
+          Points        [370, 170]
           DstComponent  "Tr1"
           DstTerminal   3
         }
@@ -4649,14 +4649,14 @@ Plecs {
           Type          Wire
           SrcComponent  "Rm"
           SrcTerminal   1
-          Points        [185, 130]
+          Points        [315, 270]
           Branch {
-            Points        [220, 130]
+            Points        [350, 270]
             DstComponent  "Tr1"
             DstTerminal   2
           }
           Branch {
-            Points        [60, 130]
+            Points        [190, 270]
             Branch {
               DstComponent  "w1b"
               DstTerminal   1
@@ -4678,9 +4678,9 @@ Plecs {
           Type          Wire
           SrcComponent  "Lm"
           SrcTerminal   1
-          Points        [185, 30]
+          Points        [315, 170]
           Branch {
-            Points        [220, 30]
+            Points        [350, 170]
             DstComponent  "Tr1"
             DstTerminal   1
           }
@@ -4693,7 +4693,7 @@ Plecs {
           Type          Wire
           SrcComponent  "L1-Lm"
           SrcTerminal   1
-          Points        [60, 30]
+          Points        [190, 170]
           Branch {
             DstComponent  "w1a"
             DstTerminal   1
@@ -4707,7 +4707,7 @@ Plecs {
           Type          Wire
           SrcComponent  "R2-Rm"
           SrcTerminal   2
-          Points        [355, 30]
+          Points        [485, 170]
           Branch {
             DstComponent  "w2a"
             DstTerminal   1
@@ -4721,7 +4721,7 @@ Plecs {
           Type          Wire
           SrcComponent  "Tr1"
           SrcTerminal   4
-          Points        [240, 130; 355, 130]
+          Points        [370, 270; 485, 270]
           Branch {
             DstComponent  "w2b"
             DstTerminal   1
@@ -4778,4 +4778,4 @@ Plecs {
     } 
   }
 }
-DemoSignature "84Qlo3ZaAAncavUhqrJPKEpFMUjevQEISwEQfGPeoOk="
+DemoSignature "+fW+WDnOe6r+A7jeQvG9EcRGJ5T0b8Ox7/jyF56BDGs="

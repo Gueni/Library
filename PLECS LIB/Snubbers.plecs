@@ -47,7 +47,7 @@ Plecs {
   ScriptsDialogGeometry ""
   ScriptsDialogSplitterPos "0"
   Schematic {
-    Location      [0, 26; 1536, 780]
+    Location      [0, 23; 1536, 777]
     ZoomFactor    1.96258
     SliderPosition [7, 0]
     ShowBrowser   off
@@ -313,14 +313,14 @@ Plecs {
             Type          Constant
             Name          "PH"
             Show          on
-            Position      [90, 170]
+            Position      [125, 160]
             Direction     right
             Flipped       off
-            LabelPosition south
-            Frame         [-10, -10; 10, 10]
+            LabelPosition west
+            Frame         [-40, -10; 40, 10]
             Parameter {
               Variable      "Value"
-              Value         "0"
+              Value         "zeros(0,1)"
               Show          off
             }
             Parameter {
@@ -928,14 +928,14 @@ Plecs {
             Type          Constant
             Name          "PH"
             Show          on
-            Position      [290, 170]
+            Position      [320, 170]
             Direction     right
             Flipped       off
-            LabelPosition south
-            Frame         [-10, -10; 10, 10]
+            LabelPosition west
+            Frame         [-40, -10; 40, 10]
             Parameter {
               Variable      "Value"
-              Value         "0"
+              Value         "zeros(0,1)"
               Show          off
             }
             Parameter {
@@ -1168,4 +1168,4 @@ Plecs {
     } 
   }
 }
-DemoSignature "+6kNCFUL1ZmRF63pbs8WU8fMf2D5GjVYDoPGkIZn0uk="
+DemoSignature "3SwfC22+2Zw+NceHpqn0p/pL7LzMY414GlR/+sJ2F1k="

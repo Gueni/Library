@@ -3190,14 +3190,14 @@ Plecs {
             Type          Constant
             Name          "PH"
             Show          on
-            Position      [145, 290]
+            Position      [405, 150]
             Direction     right
             Flipped       off
             LabelPosition west
-            Frame         [-10, -10; 10, 10]
+            Frame         [-45, -10; 45, 10]
             Parameter {
               Variable      "Value"
-              Value         "0"
+              Value         "zeros(0,1)"
               Show          off
             }
             Parameter {
@@ -3382,26 +3382,6 @@ Plecs {
             }
           }
           Component {
-            Type          Constant
-            Name          "PH"
-            Show          on
-            Position      [145, 290]
-            Direction     right
-            Flipped       off
-            LabelPosition west
-            Frame         [-10, -10; 10, 10]
-            Parameter {
-              Variable      "Value"
-              Value         "0"
-              Show          off
-            }
-            Parameter {
-              Variable      "DataType"
-              Value         "10"
-              Show          off
-            }
-          }
-          Component {
             Type          Voltmeter
             Name          "Vds"
             Show          off
@@ -3409,6 +3389,26 @@ Plecs {
             Direction     up
             Flipped       off
             LabelPosition west
+          }
+          Component {
+            Type          Constant
+            Name          "PH"
+            Show          on
+            Position      [405, 110]
+            Direction     right
+            Flipped       off
+            LabelPosition west
+            Frame         [-45, -10; 45, 10]
+            Parameter {
+              Variable      "Value"
+              Value         "zeros(0,1)"
+              Show          off
+            }
+            Parameter {
+              Variable      "DataType"
+              Value         "10"
+              Show          off
+            }
           }
           Connection {
             Type          Wire
@@ -3532,26 +3532,6 @@ Plecs {
             }
           }
           Component {
-            Type          Constant
-            Name          "PH"
-            Show          on
-            Position      [145, 290]
-            Direction     right
-            Flipped       off
-            LabelPosition west
-            Frame         [-10, -10; 10, 10]
-            Parameter {
-              Variable      "Value"
-              Value         "0"
-              Show          off
-            }
-            Parameter {
-              Variable      "DataType"
-              Value         "10"
-              Show          off
-            }
-          }
-          Component {
             Type          Voltmeter
             Name          "Vds"
             Show          off
@@ -3559,6 +3539,26 @@ Plecs {
             Direction     up
             Flipped       off
             LabelPosition west
+          }
+          Component {
+            Type          Constant
+            Name          "PH"
+            Show          on
+            Position      [365, 110]
+            Direction     right
+            Flipped       off
+            LabelPosition west
+            Frame         [-45, -10; 45, 10]
+            Parameter {
+              Variable      "Value"
+              Value         "zeros(0,1)"
+              Show          off
+            }
+            Parameter {
+              Variable      "DataType"
+              Value         "10"
+              Show          off
+            }
           }
           Connection {
             Type          Wire
@@ -4283,14 +4283,14 @@ Plecs {
             Type          Constant
             Name          "PH"
             Show          on
-            Position      [130, 130]
+            Position      [320, 110]
             Direction     right
             Flipped       off
             LabelPosition south
-            Frame         [-10, -10; 10, 10]
+            Frame         [-40, -10; 40, 10]
             Parameter {
               Variable      "Value"
-              Value         "0"
+              Value         "zeros(0,1)"
               Show          off
             }
             Parameter {
@@ -4416,14 +4416,14 @@ Plecs {
             Type          Constant
             Name          "PH"
             Show          on
-            Position      [130, 130]
+            Position      [320, 105]
             Direction     right
             Flipped       off
             LabelPosition south
-            Frame         [-10, -10; 10, 10]
+            Frame         [-40, -10; 40, 10]
             Parameter {
               Variable      "Value"
-              Value         "0"
+              Value         "zeros(0,1)"
               Show          off
             }
             Parameter {
@@ -4621,4 +4621,4 @@ Plecs {
     } 
   }
 }
-DemoSignature "WZaZkYgFnacXeV1lT+swlgCyMBbM8KfwUPG8793Ay24="
+DemoSignature "Cs6yFOZVkygo4V4+r15Jd4xPBsmPTpbcvK1P5/gAT6U="
