@@ -47,7 +47,7 @@ Plecs {
   ScriptsDialogGeometry ""
   ScriptsDialogSplitterPos "0"
   Schematic {
-    Location      [0, 23; 1536, 777]
+    Location      [0, 26; 1536, 780]
     ZoomFactor    1.96258
     SliderPosition [7, 0]
     ShowBrowser   off
@@ -320,7 +320,7 @@ Plecs {
             Frame         [-40, -10; 40, 10]
             Parameter {
               Variable      "Value"
-              Value         "zeros(0,1)"
+              Value         "zeros(1,1)"
               Show          off
             }
             Parameter {
@@ -935,7 +935,7 @@ Plecs {
             Frame         [-40, -10; 40, 10]
             Parameter {
               Variable      "Value"
-              Value         "zeros(0,1)"
+              Value         "zeros(1,1)"
               Show          off
             }
             Parameter {
@@ -1168,4 +1168,4 @@ Plecs {
     } 
   }
 }
-DemoSignature "3SwfC22+2Zw+NceHpqn0p/pL7LzMY414GlR/+sJ2F1k="
+DemoSignature "CRVgoH4m/RZhzdHXaTUTJlMYe9Sa3nbail09S8XKvJI="

@@ -47,7 +47,7 @@ Plecs {
   ScriptsDialogGeometry ""
   ScriptsDialogSplitterPos "0"
   Schematic {
-    Location      [0, 23; 1536, 777]
+    Location      [0, 26; 1536, 780]
     ZoomFactor    2.24591
     SliderPosition [99, 0]
     ShowBrowser   off
@@ -207,7 +207,7 @@ Plecs {
             Frame         [-30, -10; 30, 10]
             Parameter {
               Variable      "Value"
-              Value         "zeros(0,1)"
+              Value         "zeros(1,1)"
               Show          off
             }
             Parameter {
@@ -366,7 +366,7 @@ Plecs {
             Frame         [-35, -10; 35, 10]
             Parameter {
               Variable      "Value"
-              Value         "zeros(0,1)"
+              Value         "zeros(1,1)"
               Show          off
             }
             Parameter {
@@ -537,7 +537,7 @@ Plecs {
             Frame         [-35, -10; 35, 10]
             Parameter {
               Variable      "Value"
-              Value         "zeros(0,1)"
+              Value         "zeros(1,1)"
               Show          off
             }
             Parameter {
@@ -722,7 +722,7 @@ Plecs {
             Frame         [-30, -10; 30, 10]
             Parameter {
               Variable      "Value"
-              Value         "zeros(0,1)"
+              Value         "zeros(1,1)"
               Show          off
             }
             Parameter {
@@ -862,7 +862,7 @@ Plecs {
             Frame         [-35, -10; 35, 10]
             Parameter {
               Variable      "Value"
-              Value         "zeros(0,1)"
+              Value         "zeros(1,1)"
               Show          off
             }
             Parameter {
@@ -973,7 +973,7 @@ Plecs {
             Frame         [-35, -10; 35, 10]
             Parameter {
               Variable      "Value"
-              Value         "zeros(0,1)"
+              Value         "zeros(1,1)"
               Show          off
             }
             Parameter {
@@ -3061,7 +3061,7 @@ Plecs {
             Frame         [-40, -10; 40, 10]
             Parameter {
               Variable      "Value"
-              Value         "zeros(0,1)"
+              Value         "zeros(1,1)"
               Show          off
             }
             Parameter {
@@ -3410,4 +3410,4 @@ Plecs {
     } 
   }
 }
-DemoSignature "gL72fbbvrxKh3c4lYb1q6sF5lPUjh+kalxf47hN65ag="
+DemoSignature "poJIcD2RwpodkzMheHHQjWFPxBzfnMnd2+wdBlWc/1M="
