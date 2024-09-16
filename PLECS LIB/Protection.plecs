@@ -1,0 +1,268 @@
+Plecs {
+  Name          "Protection"
+  Version       "4.7"
+  CircuitModel  "ContStateSpace"
+  StartTime     "0.0"
+  TimeSpan      "1.0"
+  Timeout       ""
+  Solver        "auto"
+  MaxStep       "1e-3"
+  InitStep      "-1"
+  FixedStep     "1e-3"
+  Refine        "1"
+  ZCStepSize    "1e-9"
+  RelTol        "1e-3"
+  AbsTol        "-1"
+  TurnOnThreshold "0"
+  SyncFixedStepTasks "2"
+  UseSingleCommonBaseRate "2"
+  LossVariableLimitExceededMsg "3"
+  NegativeSwitchLossMsg "3"
+  DivisionByZeroMsg "3"
+  StiffnessDetectionMsg "2"
+  MaxConsecutiveZCs "1000"
+  AlgebraicLoopWithStateMachineMsg "3"
+  AssertionAction "1"
+  InitializationCommands ""
+  InitialState  "1"
+  SystemState   ""
+  TaskingMode   "1"
+  TaskConfigurations ""
+  CodeGenParameterInlining "2"
+  CodeGenFloatingPointFormat "2"
+  CodeGenAbsTimeUsageMsg "3"
+  CodeGenBaseName ""
+  CodeGenOutputDir ""
+  CodeGenExtraOpts ""
+  CodeGenTarget "Generic"
+  CodeGenTargetSettings ""
+  ExtendedMatrixPrecision "1"
+  MatrixSignificanceCheck "2"
+  EnableStateSpaceSplitting "2"
+  DisplayStateSpaceSplitting "1"
+  DiscretizationMethod "2"
+  ExternalModeSettings ""
+  AlgebraicLoopMethod "1"
+  AlgebraicLoopTolerance "1e-6"
+  ScriptsDialogGeometry ""
+  ScriptsDialogSplitterPos "0"
+  Schematic {
+    Location      [0, 26; 1536, 780]
+    ZoomFactor    2.24589
+    SliderPosition [98, 0]
+    ShowBrowser   off
+    BrowserWidth  100
+    Component {
+      Type          Subsystem
+      Name          "Fuse"
+      Show          on
+      Position      [190, 130]
+      Direction     up
+      Flipped       off
+      LabelPosition none
+      Frame         [-30, -10; 30, 10]
+      SampleTime    "-1"
+      CodeGenDiscretizationMethod "2"
+      CodeGenTarget "Generic"
+      MaskDisplayLang "2"
+      MaskIconFrame on
+      MaskIconOpaque off
+      MaskIconRotates on
+      Parameter {
+        Variable      "F"
+        Prompt        "Parameters"
+        Type          FreeText
+        Value         ""
+        Show          off
+        Tunable       off
+        TabName       ""
+      }
+      Terminal {
+        Type          Input
+        Position      [-5, 10]
+        Direction     down
+      }
+      Terminal {
+        Type          HeatPort
+        Position      [10, 15]
+        Direction     down
+      }
+      Terminal {
+        Type          Port
+        Position      [-35, 0]
+        Direction     left
+      }
+      Terminal {
+        Type          Port
+        Position      [35, 0]
+        Direction     right
+      }
+      Schematic {
+        Location      [0, 23; 1536, 777]
+        ZoomFactor    1.96257
+        SliderPosition [0, 0]
+        ShowBrowser   off
+        BrowserWidth  100
+        Component {
+          Type          Reference
+          SrcComponent  "Switches/FET"
+          Name          "FET"
+          Show          on
+          Position      [120, 130]
+          Direction     left
+          Flipped       on
+          LabelPosition north
+          Frame         [-20, -20; 20, 20]
+          Parameter {
+            Variable      "Switch"
+            Value         "F.SW"
+            Show          off
+          }
+          Parameter {
+            Variable      "Configuration"
+            Value         "F.SW.Config"
+            Show          off
+          }
+          Terminal {
+            Type          Input
+            Position      [-20, 0]
+            Direction     left
+          }
+          Terminal {
+            Type          Port
+            Position      [0, -25]
+            Direction     up
+          }
+          Terminal {
+            Type          Port
+            Position      [0, 25]
+            Direction     down
+          }
+          Terminal {
+            Type          HeatPort
+            Position      [10, 25]
+            Direction     down
+          }
+        }
+        Component {
+          Type          Input
+          Name          "In1"
+          Show          off
+          Position      [65, 200]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Index"
+            Value         "1"
+            Show          on
+          }
+          Parameter {
+            Variable      "Width"
+            Value         "-1"
+            Show          off
+          }
+        }
+        Component {
+          Type          HeatPort
+          Name          "Port1"
+          Show          off
+          Position      [65, 80]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Index"
+            Value         "2"
+            Show          on
+          }
+          Parameter {
+            Variable      "Width"
+            Value         "-1"
+            Show          off
+          }
+        }
+        Component {
+          Type          Port
+          Name          "+"
+          Show          on
+          Position      [65, 130]
+          Direction     right
+          Flipped       off
+          LabelPosition west
+          Parameter {
+            Variable      "Index"
+            Value         "3"
+            Show          on
+          }
+          Parameter {
+            Variable      "Width"
+            Value         "-1"
+            Show          off
+          }
+        }
+        Component {
+          Type          Port
+          Name          "-"
+          Show          on
+          Position      [180, 130]
+          Direction     left
+          Flipped       off
+          LabelPosition east
+          Parameter {
+            Variable      "Index"
+            Value         "4"
+            Show          on
+          }
+          Parameter {
+            Variable      "Width"
+            Value         "-1"
+            Show          off
+          }
+        }
+        Connection {
+          Type          Wire
+          SrcComponent  "FET"
+          SrcTerminal   3
+          DstComponent  "+"
+          DstTerminal   1
+        }
+        Connection {
+          Type          Wire
+          SrcComponent  "FET"
+          SrcTerminal   2
+          DstComponent  "-"
+          DstTerminal   1
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "In1"
+          SrcTerminal   1
+          Points        [120, 200]
+          DstComponent  "FET"
+          DstTerminal   1
+        }
+        Connection {
+          Type          HeatPipe
+          SrcComponent  "FET"
+          SrcTerminal   4
+          Points        [90, 120; 90, 80]
+          DstComponent  "Port1"
+          DstTerminal   1
+        }
+      }
+    }
+    RectangleAnnotation {
+      Position     [440, 140]
+      Width        720
+      Height       120
+      CornerRadius 3
+      Thickness    2
+      PenColor     4289331455
+      PenAlpha     1
+      BrushColor   10642217
+      BrushAlpha   0
+    } 
+  }
+}
+DemoSignature "fLjJ+I8rS37Td0BNAzXsQbVG3t1YsvzQdKtC73yt5eU="

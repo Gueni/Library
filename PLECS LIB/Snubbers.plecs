@@ -523,7 +523,7 @@ Plecs {
         Position      [-10, 0]
         Direction     left
       }
-      TerminalNames { "Port1", "Port2", "Ambient" }
+      TerminalNames { "-", "+", "Ambient" }
       Location      [0, 26; 1536, 780]
       ZoomFactor    1
       SliderPosition [0, 0]
@@ -534,12 +534,12 @@ Plecs {
         Schematic {
           Component {
             Type          Port
-            Name          "Port1"
-            Show          off
+            Name          "-"
+            Show          on
             Position      [200, 60]
             Direction     down
             Flipped       off
-            LabelPosition west
+            LabelPosition east
             Parameter {
               Variable      "Index"
               Value         "1"
@@ -553,8 +553,8 @@ Plecs {
           }
           Component {
             Type          Port
-            Name          "Port2"
-            Show          off
+            Name          "+"
+            Show          on
             Position      [200, 430]
             Direction     up
             Flipped       off
@@ -797,7 +797,7 @@ Plecs {
           }
           Connection {
             Type          Wire
-            SrcComponent  "Port1"
+            SrcComponent  "-"
             SrcTerminal   1
             Points        [200, 80]
             Branch {
@@ -816,7 +816,7 @@ Plecs {
             SrcTerminal   2
             Points        [200, 395]
             Branch {
-              DstComponent  "Port2"
+              DstComponent  "+"
               DstTerminal   1
             }
             Branch {
@@ -837,8 +837,8 @@ Plecs {
         Schematic {
           Component {
             Type          Port
-            Name          "Port1"
-            Show          off
+            Name          "-"
+            Show          on
             Position      [200, 60]
             Direction     down
             Flipped       off
@@ -856,8 +856,8 @@ Plecs {
           }
           Component {
             Type          Port
-            Name          "Port2"
-            Show          off
+            Name          "+"
+            Show          on
             Position      [200, 430]
             Direction     up
             Flipped       off
@@ -965,7 +965,7 @@ Plecs {
           }
           Connection {
             Type          Wire
-            SrcComponent  "Port1"
+            SrcComponent  "-"
             SrcTerminal   1
             Points        [200, 80]
             Branch {
@@ -982,7 +982,7 @@ Plecs {
             Type          Wire
             Points        [200, 360; 200, 395]
             Branch {
-              DstComponent  "Port2"
+              DstComponent  "+"
               DstTerminal   1
             }
             Branch {
@@ -1168,4 +1168,4 @@ Plecs {
     } 
   }
 }
-DemoSignature "CRVgoH4m/RZhzdHXaTUTJlMYe9Sa3nbail09S8XKvJI="
+DemoSignature "9UZQ8OlfM9Wv1/zVD0Hj/FlNwS+yimGk1sdrabcJYmk="

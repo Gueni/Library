@@ -48,8 +48,8 @@ Plecs {
   ScriptsDialogSplitterPos "0"
   Schematic {
     Location      [0, 26; 1536, 780]
-    ZoomFactor    2.24591
-    SliderPosition [99, 0]
+    ZoomFactor    1.96258
+    SliderPosition [25, 0]
     ShowBrowser   off
     BrowserWidth  100
     Component {
@@ -1126,10 +1126,10 @@ Plecs {
       Type          ConfigurableSubsystem
       Name          "Load"
       Show          on
-      Position      [200, 110]
+      Position      [205, 105]
       Direction     down
       Flipped       on
-      LabelPosition none
+      LabelPosition west
       Frame         [-15, -25; 15, 25]
       SampleTime    "-1"
       CodeGenDiscretizationMethod "2"
@@ -1141,7 +1141,18 @@ Plecs {
 ". The user may pass the corresponding C and L values though the dialog of the"
 " component's mask."
       MaskHelp      "Load"
-      MaskIconFrame on
+      MaskDisplay   "Icon: circle (3.5, -17.5, .5)\n"
+"Icon: line ({-10, 9.5}, {10, -9.5})\n"
+"Icon: line ({7, 10, 9}, {-9, -10, -7})\n"
+"if Preferences: get('DrawANSI') then\n"
+"\tIcon:line({0, 0, 5, -5, 5, -5, 5, 0, 0},{-15, -13, -10, -5, 0, 5, 10, 13, 1"
+"5})\n"
+"else\n"
+"\t\n"
+"\tIcon: line ({-5, 5, 5, -5, -5}, {15, 15, -15, -15, 15})\n"
+"end"
+      MaskDisplayLang "2"
+      MaskIconFrame off
       MaskIconOpaque off
       MaskIconRotates on
       Parameter {
@@ -2754,6 +2765,591 @@ Plecs {
             DstTerminal   3
           }
         }
+        Name          "Var R"
+        Schematic {
+          Component {
+            Type          Port
+            Name          "L+"
+            Show          off
+            Position      [145, 80]
+            Direction     right
+            Flipped       off
+            LabelPosition south
+            Parameter {
+              Variable      "Index"
+              Value         "1"
+              Show          on
+            }
+            Parameter {
+              Variable      "Width"
+              Value         "-1"
+              Show          off
+            }
+          }
+          Component {
+            Type          Port
+            Name          "L-"
+            Show          off
+            Position      [145, 225]
+            Direction     right
+            Flipped       off
+            LabelPosition south
+            Parameter {
+              Variable      "Index"
+              Value         "2"
+              Show          on
+            }
+            Parameter {
+              Variable      "Width"
+              Value         "-1"
+              Show          off
+            }
+          }
+          Component {
+            Type          Voltmeter
+            Name          "Vm1"
+            Show          off
+            Position      [345, 155]
+            Direction     up
+            Flipped       off
+            LabelPosition west
+          }
+          Component {
+            Type          Ammeter
+            Name          "Am1"
+            Show          off
+            Position      [215, 80]
+            Direction     left
+            Flipped       off
+            LabelPosition south
+          }
+          Component {
+            Type          Input
+            Name          "In1"
+            Show          off
+            Position      [145, 155]
+            Direction     right
+            Flipped       off
+            LabelPosition west
+            Parameter {
+              Variable      "Index"
+              Value         "3"
+              Show          on
+            }
+            Parameter {
+              Variable      "Width"
+              Value         "-1"
+              Show          off
+            }
+          }
+          Component {
+            Type          Input
+            Name          "In2"
+            Show          off
+            Position      [310, 155]
+            Direction     left
+            Flipped       off
+            LabelPosition east
+            Parameter {
+              Variable      "Index"
+              Value         "4"
+              Show          on
+            }
+            Parameter {
+              Variable      "Width"
+              Value         "-1"
+              Show          off
+            }
+          }
+          Component {
+            Type          Goto
+            Name          "Goto"
+            Show          off
+            Position      [215, 45]
+            Direction     up
+            Flipped       off
+            LabelPosition east
+            Parameter {
+              Variable      "Tag"
+              Value         "ILoad"
+              Show          off
+            }
+            Parameter {
+              Variable      "Visibility"
+              Value         "2"
+              Show          off
+            }
+          }
+          Component {
+            Type          Goto
+            Name          "Goto1"
+            Show          off
+            Position      [380, 155]
+            Direction     right
+            Flipped       off
+            LabelPosition south
+            Parameter {
+              Variable      "Tag"
+              Value         "VLoad"
+              Show          off
+            }
+            Parameter {
+              Variable      "Visibility"
+              Value         "2"
+              Show          off
+            }
+          }
+          Component {
+            Type          From
+            Name          "From"
+            Show          off
+            Position      [485, 125]
+            Direction     right
+            Flipped       off
+            LabelPosition south
+            Parameter {
+              Variable      "Tag"
+              Value         "ILoad"
+              Show          off
+            }
+            Parameter {
+              Variable      "Visibility"
+              Value         "2"
+              Show          off
+            }
+          }
+          Component {
+            Type          From
+            Name          "From1"
+            Show          off
+            Position      [485, 155]
+            Direction     right
+            Flipped       off
+            LabelPosition south
+            Parameter {
+              Variable      "Tag"
+              Value         "VLoad"
+              Show          off
+            }
+            Parameter {
+              Variable      "Visibility"
+              Value         "2"
+              Show          off
+            }
+          }
+          Component {
+            Type          Product
+            Name          "Product"
+            Show          off
+            Position      [535, 140]
+            Direction     up
+            Flipped       off
+            LabelPosition south
+            Parameter {
+              Variable      "IconShape"
+              Value         "1"
+              Show          off
+            }
+            Parameter {
+              Variable      "Inputs"
+              Value         "**"
+              Show          off
+            }
+            Parameter {
+              Variable      "DataType"
+              Value         "10"
+              Show          off
+            }
+          }
+          Component {
+            Type          Reference
+            SrcComponent  "Components/Electrical/Passive Components/R3"
+            Name          "R3"
+            Show          off
+            Position      [265, 145]
+            Direction     down
+            Flipped       on
+            LabelPosition west
+            Frame         [-8, -15; 8, 15]
+            Terminal {
+              Type          Port
+              Position      [0, -20]
+              Direction     up
+            }
+            Terminal {
+              Type          Port
+              Position      [0, 20]
+              Direction     down
+            }
+            Terminal {
+              Type          Input
+              Position      [-10, 10]
+              Direction     left
+            }
+          }
+          Connection {
+            Type          Wire
+            SrcComponent  "Vm1"
+            SrcTerminal   1
+            Points        [345, 80; 265, 80]
+            Branch {
+              DstComponent  "R3"
+              DstTerminal   1
+            }
+            Branch {
+              DstComponent  "Am1"
+              DstTerminal   2
+            }
+          }
+          Connection {
+            Type          Wire
+            SrcComponent  "Am1"
+            SrcTerminal   1
+            DstComponent  "L+"
+            DstTerminal   1
+          }
+          Connection {
+            Type          Signal
+            SrcComponent  "Am1"
+            SrcTerminal   3
+            DstComponent  "Goto"
+            DstTerminal   1
+          }
+          Connection {
+            Type          Signal
+            SrcComponent  "Vm1"
+            SrcTerminal   3
+            DstComponent  "Goto1"
+            DstTerminal   1
+          }
+          Connection {
+            Type          Signal
+            SrcComponent  "From"
+            SrcTerminal   1
+            Points        [500, 125; 500, 135]
+            DstComponent  "Product"
+            DstTerminal   2
+          }
+          Connection {
+            Type          Signal
+            SrcComponent  "From1"
+            SrcTerminal   1
+            Points        [500, 155; 500, 145]
+            DstComponent  "Product"
+            DstTerminal   3
+          }
+          Connection {
+            Type          Wire
+            SrcComponent  "R3"
+            SrcTerminal   2
+            Points        [265, 225]
+            Branch {
+              Points        [345, 225]
+              DstComponent  "Vm1"
+              DstTerminal   2
+            }
+            Branch {
+              DstComponent  "L-"
+              DstTerminal   1
+            }
+          }
+          Connection {
+            Type          Signal
+            SrcComponent  "In2"
+            SrcTerminal   1
+            DstComponent  "R3"
+            DstTerminal   3
+          }
+        }
+        Name          "Var I"
+        Schematic {
+          Component {
+            Type          Port
+            Name          "L+"
+            Show          off
+            Position      [145, 80]
+            Direction     right
+            Flipped       off
+            LabelPosition south
+            Parameter {
+              Variable      "Index"
+              Value         "1"
+              Show          on
+            }
+            Parameter {
+              Variable      "Width"
+              Value         "-1"
+              Show          off
+            }
+          }
+          Component {
+            Type          Port
+            Name          "L-"
+            Show          off
+            Position      [145, 225]
+            Direction     right
+            Flipped       off
+            LabelPosition south
+            Parameter {
+              Variable      "Index"
+              Value         "2"
+              Show          on
+            }
+            Parameter {
+              Variable      "Width"
+              Value         "-1"
+              Show          off
+            }
+          }
+          Component {
+            Type          Voltmeter
+            Name          "Vm1"
+            Show          off
+            Position      [345, 155]
+            Direction     up
+            Flipped       off
+            LabelPosition west
+          }
+          Component {
+            Type          Ammeter
+            Name          "Am1"
+            Show          off
+            Position      [215, 80]
+            Direction     left
+            Flipped       off
+            LabelPosition south
+          }
+          Component {
+            Type          Input
+            Name          "In1"
+            Show          off
+            Position      [145, 155]
+            Direction     right
+            Flipped       off
+            LabelPosition west
+            Parameter {
+              Variable      "Index"
+              Value         "3"
+              Show          on
+            }
+            Parameter {
+              Variable      "Width"
+              Value         "-1"
+              Show          off
+            }
+          }
+          Component {
+            Type          Input
+            Name          "In2"
+            Show          off
+            Position      [310, 155]
+            Direction     left
+            Flipped       off
+            LabelPosition east
+            Parameter {
+              Variable      "Index"
+              Value         "4"
+              Show          on
+            }
+            Parameter {
+              Variable      "Width"
+              Value         "-1"
+              Show          off
+            }
+          }
+          Component {
+            Type          Goto
+            Name          "Goto"
+            Show          off
+            Position      [215, 45]
+            Direction     up
+            Flipped       off
+            LabelPosition east
+            Parameter {
+              Variable      "Tag"
+              Value         "ILoad"
+              Show          off
+            }
+            Parameter {
+              Variable      "Visibility"
+              Value         "2"
+              Show          off
+            }
+          }
+          Component {
+            Type          Goto
+            Name          "Goto1"
+            Show          off
+            Position      [380, 155]
+            Direction     right
+            Flipped       off
+            LabelPosition south
+            Parameter {
+              Variable      "Tag"
+              Value         "VLoad"
+              Show          off
+            }
+            Parameter {
+              Variable      "Visibility"
+              Value         "2"
+              Show          off
+            }
+          }
+          Component {
+            Type          From
+            Name          "From"
+            Show          off
+            Position      [485, 125]
+            Direction     right
+            Flipped       off
+            LabelPosition south
+            Parameter {
+              Variable      "Tag"
+              Value         "ILoad"
+              Show          off
+            }
+            Parameter {
+              Variable      "Visibility"
+              Value         "2"
+              Show          off
+            }
+          }
+          Component {
+            Type          From
+            Name          "From1"
+            Show          off
+            Position      [485, 155]
+            Direction     right
+            Flipped       off
+            LabelPosition south
+            Parameter {
+              Variable      "Tag"
+              Value         "VLoad"
+              Show          off
+            }
+            Parameter {
+              Variable      "Visibility"
+              Value         "2"
+              Show          off
+            }
+          }
+          Component {
+            Type          Product
+            Name          "Product"
+            Show          off
+            Position      [535, 140]
+            Direction     up
+            Flipped       off
+            LabelPosition south
+            Parameter {
+              Variable      "IconShape"
+              Value         "1"
+              Show          off
+            }
+            Parameter {
+              Variable      "Inputs"
+              Value         "**"
+              Show          off
+            }
+            Parameter {
+              Variable      "DataType"
+              Value         "10"
+              Show          off
+            }
+          }
+          Component {
+            Type          CurrentSource
+            Name          "I"
+            Show          on
+            Position      [265, 155]
+            Direction     up
+            Flipped       on
+            LabelPosition west
+            Parameter {
+              Variable      "DiscretizationBehavior"
+              Value         "2"
+              Show          off
+            }
+            Parameter {
+              Variable      "StateSpaceInlining"
+              Value         "1"
+              Show          off
+            }
+          }
+          Connection {
+            Type          Wire
+            SrcComponent  "Vm1"
+            SrcTerminal   1
+            Points        [345, 80; 265, 80]
+            Branch {
+              DstComponent  "I"
+              DstTerminal   1
+            }
+            Branch {
+              DstComponent  "Am1"
+              DstTerminal   2
+            }
+          }
+          Connection {
+            Type          Wire
+            SrcComponent  "Am1"
+            SrcTerminal   1
+            DstComponent  "L+"
+            DstTerminal   1
+          }
+          Connection {
+            Type          Signal
+            SrcComponent  "Am1"
+            SrcTerminal   3
+            DstComponent  "Goto"
+            DstTerminal   1
+          }
+          Connection {
+            Type          Signal
+            SrcComponent  "Vm1"
+            SrcTerminal   3
+            DstComponent  "Goto1"
+            DstTerminal   1
+          }
+          Connection {
+            Type          Signal
+            SrcComponent  "From"
+            SrcTerminal   1
+            Points        [500, 125; 500, 135]
+            DstComponent  "Product"
+            DstTerminal   2
+          }
+          Connection {
+            Type          Signal
+            SrcComponent  "From1"
+            SrcTerminal   1
+            Points        [500, 155; 500, 145]
+            DstComponent  "Product"
+            DstTerminal   3
+          }
+          Connection {
+            Type          Wire
+            SrcComponent  "L-"
+            SrcTerminal   1
+            Points        [265, 225]
+            Branch {
+              Points        [345, 225]
+              DstComponent  "Vm1"
+              DstTerminal   2
+            }
+            Branch {
+              DstComponent  "I"
+              DstTerminal   2
+            }
+          }
+          Connection {
+            Type          Signal
+            SrcComponent  "In2"
+            SrcTerminal   1
+            DstComponent  "I"
+            DstTerminal   3
+          }
+        }
         Name          "Short"
         Schematic {
           Component {
@@ -3410,4 +4006,4 @@ Plecs {
     } 
   }
 }
-DemoSignature "poJIcD2RwpodkzMheHHQjWFPxBzfnMnd2+wdBlWc/1M="
+DemoSignature "TXVNdAggecOEUApYVsjoq+U40JEuRv+xZEUxwo7M+TI="
