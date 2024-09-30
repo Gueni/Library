@@ -1,0 +1,34 @@
+Export log for : PcbLib.Rep
+AddingPadStyle (Default)
+AddingPadStyle P:SX65Y65D431
+AddingPadStyle P:EX65Y65D431
+AddingPadStyle P:EX236Y236D1571
+AddingPadStyle EF39X39TOP1
+AddingPadStyle P:SX59Y59D351
+AddingPadStyle P:EX0Y0D1571
+AddingPadStyle EF39X33TOP1
+AddingPadStyle EF73X47TOP1
+AddingPadStyle EF37X24TOP1
+AddingPadStyle EF59X24TOP1
+AddingPadStyle EF53X24TOP1
+AddingPadStyle EF174X140TOP1
+AddingPadStyle EF124X22TOP1
+AddingPadStyle EF24X24TOP1
+AddingPadStyle EF107X50TOP1
+AddingPadStyle EF47X24TOP1
+AddingPadStyle EF90X55TOP1
+AddingPadStyle EF243X224TOP1
+AddingPadStyle EF49X30TOP1
+AddingPadStyle EF76X39TOP1
+AddingPadStyle EF47X30TOP1
+AddingPadStyle EF91X61TOP1
+AddingPadStyle P:SX100Y100D671
+AddingPadStyle P:EX100Y100D671
+AddingPadStyle EF161X79TOP1
+Adding ViaStyle (Default)
+Adding TextStyle (Default)
+Adding PatternDef 11328-T078
+      Warning: Unexpected ComponentBody Object Found On Layer Mechanical1.
+Adding CompDef 11328-T078
+ 
+EndLog

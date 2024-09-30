@@ -4282,7 +4282,7 @@ Plecs {
       }
     }
     Component {
-      Type          Subsystem
+      Type          ConfigurableSubsystem
       Name          "Choke"
       Show          on
       Position      [180, 135]
@@ -4390,353 +4390,553 @@ Plecs {
         Direction     down
       }
       CommentThroughTerminals    [ [ 0 1 ][ 2 3 ] ]
-      Schematic {
-        Location      [0, 26; 1536, 780]
-        ZoomFactor    1.30957
-        SliderPosition [0, 0]
-        ShowBrowser   off
-        BrowserWidth  100
-        Component {
-          Type          Inductor
-          Name          "L1-Lm"
-          Show          on
-          Position      [215, 170]
-          Direction     left
-          Flipped       off
-          LabelPosition north
-          Parameter {
-            Variable      "L"
-            Value         "L(1)-Lm"
-            Show          off
-          }
-          Parameter {
-            Variable      "i_init"
-            Value         "i0(1)"
-            Show          off
-          }
-        }
-        Component {
-          Type          Resistor
-          Name          "R1-Rm"
-          Show          on
-          Position      [270, 170]
-          Direction     left
-          Flipped       off
-          LabelPosition north
-          Parameter {
-            Variable      "R"
-            Value         "R(1)-Rm"
-            Show          off
-          }
-        }
-        Component {
-          Type          Port
-          Name          "w1a"
-          Show          on
-          Position      [165, 170]
-          Direction     right
-          Flipped       off
-          LabelPosition south
-          Parameter {
-            Variable      "Index"
-            Value         "1"
+      TerminalNames { "w1a", "w1b", "w2a", "w2b" }
+      Location      [0, 26; 1536, 780]
+      ZoomFactor    1
+      SliderPosition [0, 0]
+      ShowBrowser   off
+      BrowserWidth  100
+      Configurations {
+        Name          "Configuration 1"
+        Schematic {
+          Component {
+            Type          Inductor
+            Name          "L1-Lm"
             Show          on
+            Position      [215, 170]
+            Direction     left
+            Flipped       off
+            LabelPosition north
+            Parameter {
+              Variable      "L"
+              Value         "L(1)-Lm"
+              Show          off
+            }
+            Parameter {
+              Variable      "i_init"
+              Value         "i0(1)"
+              Show          off
+            }
           }
-          Parameter {
-            Variable      "Width"
-            Value         "-1"
-            Show          off
-          }
-        }
-        Component {
-          Type          Inductor
-          Name          "Lm"
-          Show          on
-          Position      [315, 195]
-          Direction     down
-          Flipped       on
-          LabelPosition west
-          Parameter {
-            Variable      "L"
-            Value         "Lm"
-            Show          off
-          }
-          Parameter {
-            Variable      "i_init"
-            Value         "i0(1)+i0(2)"
-            Show          off
-          }
-        }
-        Component {
-          Type          Resistor
-          Name          "Rm"
-          Show          on
-          Position      [315, 245]
-          Direction     down
-          Flipped       off
-          LabelPosition west
-          Parameter {
-            Variable      "R"
-            Value         "Rm"
-            Show          off
-          }
-        }
-        Component {
-          Type          Transformer
-          Name          "Tr1"
-          Show          on
-          Position      [360, 225]
-          Direction     right
-          Flipped       on
-          LabelPosition south
-          Parameter {
-            Variable      "Windings"
-            Value         "[1 1]"
-            Show          off
-          }
-          Parameter {
-            Variable      "n"
-            Value         "[1 1]"
-            Show          off
-          }
-          Parameter {
-            Variable      "Polarity"
-            Value         "+"
-            Show          off
-          }
-          Parameter {
-            Variable      "Lm"
-            Value         "inf"
-            Show          off
-          }
-          Parameter {
-            Variable      "im0"
-            Value         "0"
-            Show          off
-          }
-        }
-        Component {
-          Type          Port
-          Name          "w1b"
-          Show          on
-          Position      [160, 270]
-          Direction     right
-          Flipped       off
-          LabelPosition south
-          Parameter {
-            Variable      "Index"
-            Value         "2"
+          Component {
+            Type          Resistor
+            Name          "R1-Rm"
             Show          on
+            Position      [270, 170]
+            Direction     left
+            Flipped       off
+            LabelPosition north
+            Parameter {
+              Variable      "R"
+              Value         "R(1)-Rm"
+              Show          off
+            }
           }
-          Parameter {
-            Variable      "Width"
-            Value         "-1"
-            Show          off
-          }
-        }
-        Component {
-          Type          Inductor
-          Name          "L2-Lm"
-          Show          on
-          Position      [405, 170]
-          Direction     left
-          Flipped       on
-          LabelPosition north
-          Parameter {
-            Variable      "L"
-            Value         "L(2)-Lm"
-            Show          off
-          }
-          Parameter {
-            Variable      "i_init"
-            Value         "i0(2)"
-            Show          off
-          }
-        }
-        Component {
-          Type          Resistor
-          Name          "R2-Rm"
-          Show          on
-          Position      [460, 170]
-          Direction     left
-          Flipped       off
-          LabelPosition north
-          Parameter {
-            Variable      "R"
-            Value         "R(2)-Rm"
-            Show          off
-          }
-        }
-        Component {
-          Type          Port
-          Name          "w2a"
-          Show          on
-          Position      [510, 170]
-          Direction     right
-          Flipped       on
-          LabelPosition south
-          Parameter {
-            Variable      "Index"
-            Value         "3"
+          Component {
+            Type          Port
+            Name          "w1a"
             Show          on
+            Position      [165, 170]
+            Direction     right
+            Flipped       off
+            LabelPosition south
+            Parameter {
+              Variable      "Index"
+              Value         "1"
+              Show          on
+            }
+            Parameter {
+              Variable      "Width"
+              Value         "-1"
+              Show          off
+            }
           }
-          Parameter {
-            Variable      "Width"
-            Value         "-1"
-            Show          off
-          }
-        }
-        Component {
-          Type          Port
-          Name          "w2b"
-          Show          on
-          Position      [510, 270]
-          Direction     right
-          Flipped       on
-          LabelPosition south
-          Parameter {
-            Variable      "Index"
-            Value         "4"
+          Component {
+            Type          Inductor
+            Name          "Lm"
             Show          on
+            Position      [315, 195]
+            Direction     down
+            Flipped       on
+            LabelPosition west
+            Parameter {
+              Variable      "L"
+              Value         "Lm"
+              Show          off
+            }
+            Parameter {
+              Variable      "i_init"
+              Value         "i0(1)+i0(2)"
+              Show          off
+            }
           }
-          Parameter {
-            Variable      "Width"
-            Value         "-1"
+          Component {
+            Type          Resistor
+            Name          "Rm"
+            Show          on
+            Position      [315, 245]
+            Direction     down
+            Flipped       off
+            LabelPosition west
+            Parameter {
+              Variable      "R"
+              Value         "Rm"
+              Show          off
+            }
+          }
+          Component {
+            Type          Transformer
+            Name          "Tr1"
+            Show          on
+            Position      [360, 225]
+            Direction     right
+            Flipped       on
+            LabelPosition south
+            Parameter {
+              Variable      "Windings"
+              Value         "[1 1]"
+              Show          off
+            }
+            Parameter {
+              Variable      "n"
+              Value         "[1 1]"
+              Show          off
+            }
+            Parameter {
+              Variable      "Polarity"
+              Value         "+"
+              Show          off
+            }
+            Parameter {
+              Variable      "Lm"
+              Value         "inf"
+              Show          off
+            }
+            Parameter {
+              Variable      "im0"
+              Value         "0"
+              Show          off
+            }
+          }
+          Component {
+            Type          Port
+            Name          "w1b"
+            Show          on
+            Position      [160, 270]
+            Direction     right
+            Flipped       off
+            LabelPosition south
+            Parameter {
+              Variable      "Index"
+              Value         "2"
+              Show          on
+            }
+            Parameter {
+              Variable      "Width"
+              Value         "-1"
+              Show          off
+            }
+          }
+          Component {
+            Type          Inductor
+            Name          "L2-Lm"
+            Show          on
+            Position      [405, 170]
+            Direction     left
+            Flipped       on
+            LabelPosition north
+            Parameter {
+              Variable      "L"
+              Value         "L(2)-Lm"
+              Show          off
+            }
+            Parameter {
+              Variable      "i_init"
+              Value         "i0(2)"
+              Show          off
+            }
+          }
+          Component {
+            Type          Resistor
+            Name          "R2-Rm"
+            Show          on
+            Position      [460, 170]
+            Direction     left
+            Flipped       off
+            LabelPosition north
+            Parameter {
+              Variable      "R"
+              Value         "R(2)-Rm"
+              Show          off
+            }
+          }
+          Component {
+            Type          Port
+            Name          "w2a"
+            Show          on
+            Position      [510, 170]
+            Direction     right
+            Flipped       on
+            LabelPosition south
+            Parameter {
+              Variable      "Index"
+              Value         "3"
+              Show          on
+            }
+            Parameter {
+              Variable      "Width"
+              Value         "-1"
+              Show          off
+            }
+          }
+          Component {
+            Type          Port
+            Name          "w2b"
+            Show          on
+            Position      [510, 270]
+            Direction     right
+            Flipped       on
+            LabelPosition south
+            Parameter {
+              Variable      "Index"
+              Value         "4"
+              Show          on
+            }
+            Parameter {
+              Variable      "Width"
+              Value         "-1"
+              Show          off
+            }
+          }
+          Component {
+            Type          Voltmeter
+            Name          "Vm1"
             Show          off
+            Position      [190, 220]
+            Direction     up
+            Flipped       off
+            LabelPosition west
           }
-        }
-        Component {
-          Type          Voltmeter
-          Name          "Vm1"
-          Show          off
-          Position      [190, 220]
-          Direction     up
-          Flipped       off
-          LabelPosition west
-        }
-        Component {
-          Type          Voltmeter
-          Name          "Vm2"
-          Show          off
-          Position      [485, 220]
-          Direction     up
-          Flipped       off
-          LabelPosition west
-        }
-        Connection {
-          Type          Wire
-          SrcComponent  "L2-Lm"
-          SrcTerminal   2
-          Points        [370, 170]
-          DstComponent  "Tr1"
-          DstTerminal   3
-        }
-        Connection {
-          Type          Wire
-          SrcComponent  "L2-Lm"
-          SrcTerminal   1
-          DstComponent  "R2-Rm"
-          DstTerminal   1
-        }
-        Connection {
-          Type          Wire
-          SrcComponent  "L1-Lm"
-          SrcTerminal   2
-          DstComponent  "R1-Rm"
-          DstTerminal   1
-        }
-        Connection {
-          Type          Wire
-          SrcComponent  "Rm"
-          SrcTerminal   1
-          Points        [315, 270]
-          Branch {
-            Points        [350, 270]
+          Component {
+            Type          Voltmeter
+            Name          "Vm2"
+            Show          off
+            Position      [485, 220]
+            Direction     up
+            Flipped       off
+            LabelPosition west
+          }
+          Connection {
+            Type          Wire
+            SrcComponent  "L2-Lm"
+            SrcTerminal   2
+            Points        [370, 170]
             DstComponent  "Tr1"
+            DstTerminal   3
+          }
+          Connection {
+            Type          Wire
+            SrcComponent  "L2-Lm"
+            SrcTerminal   1
+            DstComponent  "R2-Rm"
+            DstTerminal   1
+          }
+          Connection {
+            Type          Wire
+            SrcComponent  "L1-Lm"
+            SrcTerminal   2
+            DstComponent  "R1-Rm"
+            DstTerminal   1
+          }
+          Connection {
+            Type          Wire
+            SrcComponent  "Rm"
+            SrcTerminal   1
+            Points        [315, 270]
+            Branch {
+              Points        [350, 270]
+              DstComponent  "Tr1"
+              DstTerminal   2
+            }
+            Branch {
+              Points        [190, 270]
+              Branch {
+                DstComponent  "w1b"
+                DstTerminal   1
+              }
+              Branch {
+                DstComponent  "Vm1"
+                DstTerminal   2
+              }
+            }
+          }
+          Connection {
+            Type          Wire
+            SrcComponent  "Rm"
+            SrcTerminal   2
+            DstComponent  "Lm"
             DstTerminal   2
           }
-          Branch {
-            Points        [190, 270]
+          Connection {
+            Type          Wire
+            SrcComponent  "Lm"
+            SrcTerminal   1
+            Points        [315, 170]
             Branch {
-              DstComponent  "w1b"
+              Points        [350, 170]
+              DstComponent  "Tr1"
+              DstTerminal   1
+            }
+            Branch {
+              DstComponent  "R1-Rm"
+              DstTerminal   2
+            }
+          }
+          Connection {
+            Type          Wire
+            SrcComponent  "L1-Lm"
+            SrcTerminal   1
+            Points        [190, 170]
+            Branch {
+              DstComponent  "w1a"
               DstTerminal   1
             }
             Branch {
               DstComponent  "Vm1"
+              DstTerminal   1
+            }
+          }
+          Connection {
+            Type          Wire
+            SrcComponent  "R2-Rm"
+            SrcTerminal   2
+            Points        [485, 170]
+            Branch {
+              DstComponent  "w2a"
+              DstTerminal   1
+            }
+            Branch {
+              DstComponent  "Vm2"
+              DstTerminal   1
+            }
+          }
+          Connection {
+            Type          Wire
+            SrcComponent  "Tr1"
+            SrcTerminal   4
+            Points        [370, 270; 485, 270]
+            Branch {
+              DstComponent  "w2b"
+              DstTerminal   1
+            }
+            Branch {
+              DstComponent  "Vm2"
               DstTerminal   2
             }
           }
         }
-        Connection {
-          Type          Wire
-          SrcComponent  "Rm"
-          SrcTerminal   2
-          DstComponent  "Lm"
-          DstTerminal   2
+        Name          "Configuration 1 copy"
+        Schematic {
+          Component {
+            Type          Inductor
+            Name          "L1-Lm"
+            Show          on
+            Position      [260, 170]
+            Direction     left
+            Flipped       off
+            LabelPosition north
+            Parameter {
+              Variable      "L"
+              Value         "L(1)-Lm"
+              Show          off
+            }
+            Parameter {
+              Variable      "i_init"
+              Value         "i0(1)"
+              Show          off
+            }
+          }
+          Component {
+            Type          Port
+            Name          "w1a"
+            Show          on
+            Position      [165, 170]
+            Direction     right
+            Flipped       off
+            LabelPosition south
+            Parameter {
+              Variable      "Index"
+              Value         "1"
+              Show          on
+            }
+            Parameter {
+              Variable      "Width"
+              Value         "-1"
+              Show          off
+            }
+          }
+          Component {
+            Type          Port
+            Name          "w1b"
+            Show          on
+            Position      [160, 270]
+            Direction     right
+            Flipped       off
+            LabelPosition south
+            Parameter {
+              Variable      "Index"
+              Value         "2"
+              Show          on
+            }
+            Parameter {
+              Variable      "Width"
+              Value         "-1"
+              Show          off
+            }
+          }
+          Component {
+            Type          Inductor
+            Name          "L2-Lm"
+            Show          on
+            Position      [260, 270]
+            Direction     right
+            Flipped       on
+            LabelPosition south
+            Parameter {
+              Variable      "L"
+              Value         "L(2)-Lm"
+              Show          off
+            }
+            Parameter {
+              Variable      "i_init"
+              Value         "i0(2)"
+              Show          off
+            }
+          }
+          Component {
+            Type          Port
+            Name          "w2a"
+            Show          on
+            Position      [510, 170]
+            Direction     right
+            Flipped       on
+            LabelPosition south
+            Parameter {
+              Variable      "Index"
+              Value         "3"
+              Show          on
+            }
+            Parameter {
+              Variable      "Width"
+              Value         "-1"
+              Show          off
+            }
+          }
+          Component {
+            Type          Port
+            Name          "w2b"
+            Show          on
+            Position      [510, 270]
+            Direction     right
+            Flipped       on
+            LabelPosition south
+            Parameter {
+              Variable      "Index"
+              Value         "4"
+              Show          on
+            }
+            Parameter {
+              Variable      "Width"
+              Value         "-1"
+              Show          off
+            }
+          }
+          Component {
+            Type          Voltmeter
+            Name          "Vm1"
+            Show          off
+            Position      [190, 220]
+            Direction     up
+            Flipped       off
+            LabelPosition west
+          }
+          Component {
+            Type          Voltmeter
+            Name          "Vm2"
+            Show          off
+            Position      [485, 220]
+            Direction     up
+            Flipped       off
+            LabelPosition west
+          }
+          Connection {
+            Type          Wire
+            SrcComponent  "L1-Lm"
+            SrcTerminal   1
+            Points        [190, 170]
+            Branch {
+              DstComponent  "w1a"
+              DstTerminal   1
+            }
+            Branch {
+              DstComponent  "Vm1"
+              DstTerminal   1
+            }
+          }
+          Connection {
+            Type          Wire
+            SrcComponent  "w2a"
+            SrcTerminal   1
+            Points        [485, 170]
+            Branch {
+              DstComponent  "L1-Lm"
+              DstTerminal   2
+            }
+            Branch {
+              DstComponent  "Vm2"
+              DstTerminal   1
+            }
+          }
+          Connection {
+            Type          Wire
+            SrcComponent  "w1b"
+            SrcTerminal   1
+            Points        [190, 270]
+            Branch {
+              DstComponent  "Vm1"
+              DstTerminal   2
+            }
+            Branch {
+              DstComponent  "L2-Lm"
+              DstTerminal   1
+            }
+          }
+          Connection {
+            Type          Wire
+            SrcComponent  "w2b"
+            SrcTerminal   1
+            Points        [485, 270]
+            Branch {
+              DstComponent  "Vm2"
+              DstTerminal   2
+            }
+            Branch {
+              DstComponent  "L2-Lm"
+              DstTerminal   2
+            }
+          }
         }
-        Connection {
-          Type          Wire
-          SrcComponent  "Lm"
-          SrcTerminal   1
-          Points        [315, 170]
-          Branch {
-            Points        [350, 170]
-            DstComponent  "Tr1"
-            DstTerminal   1
-          }
-          Branch {
-            DstComponent  "R1-Rm"
-            DstTerminal   2
-          }
-        }
-        Connection {
-          Type          Wire
-          SrcComponent  "L1-Lm"
-          SrcTerminal   1
-          Points        [190, 170]
-          Branch {
-            DstComponent  "w1a"
-            DstTerminal   1
-          }
-          Branch {
-            DstComponent  "Vm1"
-            DstTerminal   1
-          }
-        }
-        Connection {
-          Type          Wire
-          SrcComponent  "R2-Rm"
-          SrcTerminal   2
-          Points        [485, 170]
-          Branch {
-            DstComponent  "w2a"
-            DstTerminal   1
-          }
-          Branch {
-            DstComponent  "Vm2"
-            DstTerminal   1
-          }
-        }
-        Connection {
-          Type          Wire
-          SrcComponent  "Tr1"
-          SrcTerminal   4
-          Points        [370, 270; 485, 270]
-          Branch {
-            DstComponent  "w2b"
-            DstTerminal   1
-          }
-          Branch {
-            DstComponent  "Vm2"
-            DstTerminal   2
-          }
-        }
+      }
+      Parameter {
+        Variable      "Configuration"
+        Value         "1"
+        Show          off
       }
       MaskProbe {
         Name          "Winding 1 current"
         Probe {
           Component     "L1-Lm"
-          Path          ""
+          Path          "Configuration 1"
           Signals       {"Inductor current"}
         }
       }
@@ -4744,7 +4944,7 @@ Plecs {
         Name          "Winding 1 voltage"
         Probe {
           Component     "Vm1"
-          Path          ""
+          Path          "Configuration 1"
           Signals       {"Measured voltage"}
         }
       }
@@ -4752,7 +4952,7 @@ Plecs {
         Name          "Winding 2 current"
         Probe {
           Component     "L2-Lm"
-          Path          ""
+          Path          "Configuration 1"
           Signals       {"Inductor current"}
         }
       }
@@ -4760,7 +4960,7 @@ Plecs {
         Name          "Winding 2 voltage"
         Probe {
           Component     "Vm2"
-          Path          ""
+          Path          "Configuration 1"
           Signals       {"Measured voltage"}
         }
       }
@@ -4778,4 +4978,4 @@ Plecs {
     } 
   }
 }
-DemoSignature "pPWpiJ+AepYKY1NTw7MpSeiS9dVEBuhr0q+pt/muFYE="
+DemoSignature "+h/WI81rdoujERS3Oda+/W5qqiVVvemIt16GmnZpqEk="
